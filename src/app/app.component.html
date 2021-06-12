@@ -1,0 +1,43 @@
+<section class="mat-typography mat-app-background app-frame"
+         [ngClass]="themer.isDark ? 'app-dark' : 'app-light'">
+  <mat-toolbar color="primary"
+               class="sticky-top">
+    <button mat-icon-button
+            class="pr8"
+            [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item
+              routerLink="theme">Theme</button>
+      <button mat-menu-item
+              routerLink="utility">Utility</button>
+      <button mat-menu-item
+              routerLink="snacker">Snacker</button>
+      <button mat-menu-item
+              routerLink="elevation">Elevation</button>
+      <button mat-menu-item
+              routerLink="glow">Glow</button>
+    </mat-menu>
+    <span class="cursor-pointer"
+          routerLink="/"
+          fxFlex>Material Theming</span>
+    <button mat-icon-button
+            [ngClass]="themer.isDark ? 'color-text' : 'color-amber'"
+            (click)="themer.toggleTheme()">
+      <mat-icon *ngIf="!(themer.isDark)">brightness_5</mat-icon>
+      <mat-icon *ngIf="themer.isDark">brightness_3</mat-icon>
+    </button>
+    <a mat-icon-button
+       class="color-background ml8"
+       href="https://github.com/JaimeStill/material-theming"
+       target="_blank">
+      <mat-icon class="fa-2x"
+                fontSet="fab"
+                fontIcon="fa-github"></mat-icon>
+    </a>
+  </mat-toolbar>
+  <section class="app-container">
+    <router-outlet></router-outlet>
+  </section>
+</section>

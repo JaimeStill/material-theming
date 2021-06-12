@@ -1,0 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.app-frame {
+  height: 100%;
+}
+
+.app-container {
+  overflow: auto;
+  height: calc(100% - 64px);
+}
+
+mat-toolbar.mat-toolbar mat-form-field.mat-form-field {
+  font-size: 12px;
+
+  label.mat-form-field-label {
+    font-weight: bold;
+  }
+}
+
+pre.prism-theme {
+  code {
+    display: block;
+    overflow: auto;
+  }
+}
+
+@media (min-width: 0) and (max-width: 599px) {
+  .app-container {
+    height: calc(100px - 56px);
+  }
+}

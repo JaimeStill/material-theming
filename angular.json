@@ -31,7 +31,7 @@
           "skipTests": true
         },
         "@schematics/angular:application": {
-          "strict": true
+          "skipTests": true
         }
       },
       "root": "",
@@ -52,17 +52,19 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/theme/theme.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/hammerjs/hammer.js"
+            ]
           },
           "configurations": {
             "production": {
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "3mb"
                 },
                 {
                   "type": "anyComponentStyle",
