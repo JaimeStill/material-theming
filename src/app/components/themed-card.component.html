@@ -1,0 +1,17 @@
+<section fxLayout="column"
+         fxLayoutAlign="start stretch"
+         [class]="cardClass()"
+         [style.width.px]="size">
+  <section fxLayout="row"
+           fxLayoutAlign="space-between center"
+           [class]="headerClass()">
+    <p class="m8 mat-subheading-2">{{heading}}</p>
+  </section>
+  <section fxLayout="column"
+           fxLayoutAlign="start stretch"
+           class="p8">
+    <p [class]="bodyClass()">{{body}}</p>
+    <mat-divider [class]="color"></mat-divider>
+    <ng-content></ng-content>
+  </section>
+</section>

@@ -1,0 +1,23 @@
+<section fxLayout="column"
+         fxLayoutAlign="start stretch"
+         class="p8">
+  <p class="mat-title m4">Theme</p>
+  <mat-form-field class="m8" fxFlexAlign="start">
+    <mat-label>Color</mat-label>
+    <mat-select [(ngModel)]="color">
+      <mat-option *ngFor="let c of colors"
+                  [value]="c">{{c}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <themed-card [color]="color">
+    <section fxLayout="row | wrap"
+             fxLayoutAlign="start start"
+             class="pt8">
+      <indicator *ngFor="let color of colors"
+                 margin="m8"
+                 [tooltip]="color"
+                 [color]="color"
+                 [size]="12"></indicator>
+    </section>
+  </themed-card>
+</section>
