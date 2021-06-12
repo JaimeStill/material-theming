@@ -36,6 +36,6 @@ pre.prism-theme {
 
 @media (min-width: 0) and (max-width: 599px) {
   .app-container {
-    height: calc(100px - 56px);
+    height: calc(100% - 56px);
   }
 }
