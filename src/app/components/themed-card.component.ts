@@ -13,7 +13,7 @@ export class ThemedCardComponent {
   @Input() color: string = 'primary';
   @Input() size: number = 328;
 
-  cardClass = () => `rounded m4 glow-${this.color} card-outline-${this.color}`;
+  cardClass = () => `rounded m4 card-outline-${this.color}`;
   headerClass = () => `background-${this.color}`;
   bodyClass = () => `my8 color-${this.color}`;
 }

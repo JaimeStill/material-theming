@@ -2,7 +2,8 @@
          fxLayoutAlign="start stretch"
          class="p8">
   <p class="mat-title m4">Theme</p>
-  <mat-form-field class="m8" fxFlexAlign="start">
+  <mat-form-field class="m8"
+                  fxFlexAlign="start">
     <mat-label>Color</mat-label>
     <mat-select [(ngModel)]="color">
       <mat-option *ngFor="let c of colors"
@@ -20,5 +21,7 @@
                  [size]="12"></indicator>
     </section>
   </themed-card>
-  <snippet code="https://raw.githubusercontent.com/JaimeStill/material-theming/main/src/theme/theme.scss" lang="scss"></snippet>
+  <snippet fxFlexAlign="start"
+           url="https://raw.githubusercontent.com/JaimeStill/material-theming/main/src/theme/theme.scss"
+           lang="scss"></snippet>
 </section>

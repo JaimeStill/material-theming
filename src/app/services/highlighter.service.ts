@@ -6,6 +6,7 @@ import * as prism from 'prismjs';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-json';
 import 'prismjs/components/prism-markup';
+import 'prismjs/components/prism-powershell';
 import 'prismjs/components/prism-scss';
 import 'prismjs/components/prism-typescript';
 

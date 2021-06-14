@@ -9,9 +9,9 @@
     </button>
     <mat-menu #menu="matMenu">
       <button mat-menu-item
-              routerLink="theme">Theme</button>
+              routerLink="setup">Setup</button>
       <button mat-menu-item
-              routerLink="utility">Utility</button>
+              routerLink="theme">Theme</button>
       <button mat-menu-item
               routerLink="snacker">Snacker</button>
       <button mat-menu-item
@@ -20,8 +20,8 @@
               routerLink="glow">Glow</button>
     </mat-menu>
     <span class="cursor-pointer"
-          routerLink="/"
-          fxFlex>Material Theming</span>
+          routerLink="/">Material Theming</span>
+    <span fxFlex></span>
     <button mat-icon-button
             [ngClass]="themer.isDark ? 'color-text' : 'color-amber'"
             (click)="themer.toggleTheme()">

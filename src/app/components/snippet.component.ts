@@ -12,12 +12,11 @@ import { HighlighterService } from '../services';
   providers: [HighlighterService]
 })
 export class SnippetComponent implements OnInit {
-  @Input() code: string = '';
+  @Input() url: string = '';
   @Input() lang: string = '';
   @Input() margin: string = 'm4';
   @Input() padding: string = 'p8';
   @Input() border: string = 'card-outline-accent';
-  @Input() elevation: string = 'elevated';
 
   snippet: string = '';
 
@@ -26,7 +25,7 @@ export class SnippetComponent implements OnInit {
   ) { }
 
   private init = async () => {
-    const res = await this.highlighter.highlightRemote(this.code, this.lang);
+    const res = await this.highlighter.highlightRemote(this.url, this.lang);
     if (res) this.snippet = res;
   }
 
@@ -35,5 +34,5 @@ export class SnippetComponent implements OnInit {
   }
 
   preStyle = () => `prism-theme language-${this.lang}`;
-  codeStyle = () => `rounded ${this.elevation} ${this.margin} ${this.padding} ${this.border}`;
+  codeStyle = () => `rounded ${this.margin} ${this.padding} ${this.border}`;
 }
